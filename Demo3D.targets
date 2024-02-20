@@ -1,0 +1,12 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblySearchPaths>
+      C:\Program Files (x86)\Emulate3D 2023;
+      $(AssemblySearchPaths);
+    </AssemblySearchPaths>
+
+    <NoWarn>
+      CA1416; <!--x is only supported on: 'windows'-->
+    </NoWarn>
+  </PropertyGroup>
+</Project>

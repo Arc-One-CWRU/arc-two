@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>CITM</AssemblyName>
+    <RootNamespace>Demo3D.Components</RootNamespace>
+    <OutputType>Library</OutputType>
+    <LangVersion>latest</LangVersion>
+    <OutputPath>.\.build\bin\</OutputPath>
+    <ProjectGuid>{84F06244-0B61-47A9-8E97-6967564C39F9}</ProjectGuid>
+    <TargetFramework>net6-windows</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.archive\**</DefaultItemExcludes>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ActuationController.cs" />
+    <Compile Include="AdvancedActuationController.cs" />
+    <Compile Include="AdvancedPositionController.cs" />
+    <Compile Include="AngularMotor.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CountingEncoder.cs" />
+    <Compile Include="DiagnosticSensor.cs" />
+    <Compile Include="GenericController.cs" />
+    <Compile Include="IndicatorLight.cs" />
+    <Compile Include="LimitSensor.cs" />
+    <Compile Include="LimitSwitch.cs" />
+    <Compile Include="LinearMotor.cs" />
+    <Compile Include="LoadFixture.cs" />
+    <Compile Include="MechanicalGripper.cs" />
+    <Compile Include="MotionSensor.cs" />
+    <Compile Include="MotorPredictor.cs" />
+    <Compile Include="PathTrace.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="PollingEncoder.cs" />
+    <Compile Include="PositionController.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PushButton.cs" />
+    <Compile Include="DistanceLoadSource.cs" />
+    <Compile Include="QuickLoad.cs" />
+    <Compile Include="RotarySwitch.cs" />
+    <Compile Include="DistanceSensor.cs" />
+    <Compile Include="LoadSink.cs" />
+    <Compile Include="LoadSource.cs" />
+    <Compile Include="SuctionGripper.cs" />
+    <Compile Include="TimerLoadSource.cs" />
+    <Compile Include="ServerLoadSource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CT.CIPIO">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Demo3D.AspectLibrary">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Demo3D.Async">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Demo3D.Common">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Demo3D.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Demo3D.EventQueue">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Demo3D.HLE">
+      <Private>False</Private>
+      <ImplicitlyAdded>True</ImplicitlyAdded>
+    </Reference>
+    <Reference Include="Demo3D.IO">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Demo3D.Licensing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Demo3D.Raw">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Demo3D.Renderers.Common">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Demo3D.Standard">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Demo3D.Time">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Demo3D.Xml">
+      <Private>False</Private>
+      <ImplicitlyAdded>True</ImplicitlyAdded>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PLC">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CT">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SmartEdit">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SkiaSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SkiaSharp.Extended.Svg">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SoftPLC">
+      <Private>False</Private>
+      <ImplicitlyAdded>True</ImplicitlyAdded>
+    </Reference>
+    <Reference Include="WpfControls">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MotorPredictor.svg" />
+    <EmbeddedResource Include="PositionController.svg" />
+    <EmbeddedResource Include="PollingEncoder.svg" />
+    <EmbeddedResource Include="GenericController.svg" />
+    <EmbeddedResource Include="RotarySwitch.svg" />
+    <EmbeddedResource Include="IndicatorLight.svg" />
+    <EmbeddedResource Include="LoadSink.svg" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimerLoadSource.svg" />
+    <EmbeddedResource Include="DiagnosticSensor.svg" />
+    <EmbeddedResource Include="DistanceLoadSource.svg" />
+    <EmbeddedResource Include="DistanceSensor.svg" />
+    <EmbeddedResource Include="ServerLoadSource.svg" />
+    <EmbeddedResource Include="PushButton.svg" />
+    <EmbeddedResource Include="QuickLoad.svg" />
+    <EmbeddedResource Include="LinearMotor.svg" />
+    <EmbeddedResource Include="AngularMotor.svg" />
+    <EmbeddedResource Include="LimitSensor.svg" />
+    <EmbeddedResource Include="LimitSwitch.svg" />
+    <EmbeddedResource Include="SuctionGripper.svg" />
+    <EmbeddedResource Include="MechanicalGripper.svg" />
+    <EmbeddedResource Include="UnknownAspect.svg" />
+    <EmbeddedResource Include="ActuationController.svg" />
+    <EmbeddedResource Include="MotionSensor.svg" />
+    <EmbeddedResource Include="LoadFixture.svg" />
+    <EmbeddedResource Include="AdvancedActuationController.svg" />
+    <EmbeddedResource Include="AdvancedPositionController.svg" />
+    <EmbeddedResource Include="PathTrace.svg" />
+    <EmbeddedResource Include="CountingEncoder.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="..\Demo3D.targets" />
+</Project>

@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ControlPanels_Category" xml:space="preserve">
+    <value>Control Panels</value>
+  </data>
+  <data name="DiagnosticSensor" xml:space="preserve">
+    <value>Diagnostic Sensor</value>
+  </data>
+  <data name="DistanceLoadSource" xml:space="preserve">
+    <value>Distance Load Source</value>
+  </data>
+  <data name="DistanceSensor" xml:space="preserve">
+    <value>Distance Sensor</value>
+  </data>
+  <data name="Loads_Category" xml:space="preserve">
+    <value>Loads</value>
+  </data>
+  <data name="LoadSink" xml:space="preserve">
+    <value>Load Sink</value>
+  </data>
+  <data name="PhysicsGeometry_Category" xml:space="preserve">
+    <value>Physics Geometry</value>
+  </data>
+  <data name="Sensors_Category" xml:space="preserve">
+    <value>Sensors</value>
+  </data>
+  <data name="ServerLoadSource" xml:space="preserve">
+    <value>Server Load Source</value>
+  </data>
+  <data name="TimerLoadSource" xml:space="preserve">
+    <value>Timer Load Source</value>
+  </data>
+  <data name="LoadSource_CongestionZone" xml:space="preserve">
+    <value>Congestion Zone</value>
+  </data>
+  <data name="LoadSource_CongestionZone_Description" xml:space="preserve">
+    <value>Whether the congestion zone must be cleared before a load is released.</value>
+  </data>
+  <data name="TimerLoadSource_InitialInterval" xml:space="preserve">
+    <value>Initial Interval</value>
+  </data>
+  <data name="TimerLoadSource_InitialInterval_Description" xml:space="preserve">
+    <value>The time before the first load is released.</value>
+  </data>
+  <data name="TimerLoadSource_ReleaseInterval" xml:space="preserve">
+    <value>Release Interval</value>
+  </data>
+  <data name="TimerLoadSource_ReleaseInterval_Description" xml:space="preserve">
+    <value>The minimum time between each load being released.</value>
+  </data>
+  <data name="DistanceLoadSource_Conveyor_Description" xml:space="preserve">
+    <value>The conveyor aspect.</value>
+  </data>
+  <data name="DistanceLoadSource_Distance_Description" xml:space="preserve">
+    <value>The conveyor distance to travel between consecutive loads.</value>
+  </data>
+  <data name="DistanceLoadSource_InitialConveyorVelocity_Description" xml:space="preserve">
+    <value>Whether the loads should be created with the velocity of the conveyor surface.</value>
+  </data>
+  <data name="DistanceSensor_Anchor_Description" xml:space="preserve">
+    <value>The (local) location for the distance sensor.</value>
+  </data>
+  <data name="DistanceSensor_Axis_Description" xml:space="preserve">
+    <value>The (local) direction for the detector beam.</value>
+  </data>
+  <data name="DistanceSensor_Diameter_Description" xml:space="preserve">
+    <value>The diameter for the detector beam at the distance sensor's maximum range.</value>
+  </data>
+  <data name="DistanceSensor_Range_Description" xml:space="preserve">
+    <value>The maximum range for the detector beam.</value>
+  </data>
+  <data name="DistanceSensor_SampleRate_Description" xml:space="preserve">
+    <value>The number of times per second that a distance will be calculated.</value>
+  </data>
+  <data name="DistanceSensor_TargetColor_Description" xml:space="preserve">
+    <value>The color to compare against.</value>
+  </data>
+  <data name="PushButton" xml:space="preserve">
+    <value>Push Button</value>
+  </data>
+  <data name="DiagnosticSensor_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="DistanceSensor_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="LoadSource_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="IndicatorLight" xml:space="preserve">
+    <value>Indicator Light</value>
+  </data>
+  <data name="LightStack" xml:space="preserve">
+    <value>Light Stack</value>
+  </data>
+  <data name="RotarySwitch" xml:space="preserve">
+    <value>Rotary Switch</value>
+  </data>
+  <data name="QuickLoad" xml:space="preserve">
+    <value>Quick Load</value>
+  </data>
+  <data name="Motors_Category" xml:space="preserve">
+    <value>Motors</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="UnknownAspect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\unknownaspect.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LimitSwitch" xml:space="preserve">
+    <value>Limit Switch</value>
+  </data>
+  <data name="LinearMotor" xml:space="preserve">
+    <value>Linear Motor</value>
+  </data>
+  <data name="AngularMotor" xml:space="preserve">
+    <value>Angular Motor</value>
+  </data>
+  <data name="LimitSwitch_AtLowerLimit_Description" xml:space="preserve">
+    <value>Whether the motor is currently at (or exceeding) the lower limit.</value>
+  </data>
+  <data name="LimitSwitch_AtUpperLimit_Description" xml:space="preserve">
+    <value>Whether the motor is currently at (or exceeding) the upper limit.</value>
+  </data>
+  <data name="LimitSwitch_ControlMode_Description" xml:space="preserve">
+    <value>The control mode for the limit switch.</value>
+  </data>
+  <data name="LimitSwitch_LowerLimitEnabled_Description" xml:space="preserve">
+    <value>Whether the limit switch observes a lower limit.</value>
+  </data>
+  <data name="LimitSwitch_LowerLimit_Description" xml:space="preserve">
+    <value>The lower limit for the limit switch.</value>
+  </data>
+  <data name="LimitSwitch_Motor_Description" xml:space="preserve">
+    <value>The motor controlled by the limit switch.</value>
+  </data>
+  <data name="LimitSwitch_SwitchAtLowerLimit_Description" xml:space="preserve">
+    <value>Whether to switch off the motor at the lower limit.</value>
+  </data>
+  <data name="LimitSwitch_SwitchAtUpperLimit_Description" xml:space="preserve">
+    <value>Whether to switch off the motor at the upper limit.</value>
+  </data>
+  <data name="LimitSwitch_UpperLimitEnabled_Description" xml:space="preserve">
+    <value>Whether the limit switch observes an upper limit.</value>
+  </data>
+  <data name="LimitSwitch_UpperLimit_Description" xml:space="preserve">
+    <value>The upper limit for the limit switch.</value>
+  </data>
+  <data name="LinearMotor_ControlMode_Description" xml:space="preserve">
+    <value>The control mode for the linear motor.</value>
+  </data>
+  <data name="LinearMotor_TargetEnabled_Description" xml:space="preserve">
+    <value>Whether the linear motor should be automatically driven towards a target distance.</value>
+  </data>
+  <data name="LinearMotor_Acceleration_Description" xml:space="preserve">
+    <value>The acceleration for the linear motor (zero for infinite acceleration).</value>
+  </data>
+  <data name="LinearMotor_Deceleration_Description" xml:space="preserve">
+    <value>The deceleration for the linear motor (zero for infinite deceleration).</value>
+  </data>
+  <data name="LinearMotor_Direction_Description" xml:space="preserve">
+    <value>The current direction for the linear motor.</value>
+  </data>
+  <data name="LinearMotor_InitialState_Description" xml:space="preserve">
+    <value>The initial (on initialize) state for the linear motor.</value>
+  </data>
+  <data name="LinearMotor_Position_Description" xml:space="preserve">
+    <value>The current distance.</value>
+  </data>
+  <data name="LinearMotor_InitialPosition_Description" xml:space="preserve">
+    <value>The initial distance.</value>
+  </data>
+  <data name="LinearMotor_Speed_Description" xml:space="preserve">
+    <value>The target speed for the linear motor.</value>
+  </data>
+  <data name="LinearMotor_State_Description" xml:space="preserve">
+    <value>The current state for the linear motor.</value>
+  </data>
+  <data name="LinearMotor_Target_Description" xml:space="preserve">
+    <value>The target distance to drive towards.</value>
+  </data>
+  <data name="DiagnosticSensor_BlockingVisuals_Description" xml:space="preserve">
+    <value>The list of visuals currently blocking the diagnostic sensor.</value>
+  </data>
+  <data name="DiagnosticSensor_Detect_Description" xml:space="preserve">
+    <value>The labels/tags for visuals that should be detected by the diagnostic sensor (use "*" to detect all).</value>
+  </data>
+  <data name="DiagnosticSensor_HighlightBlockingVisuals_Description" xml:space="preserve">
+    <value>Whether to highlight all visuals blocking the diagnostic sensor.</value>
+  </data>
+  <data name="DiagnosticSensor_IsBlocked_Description" xml:space="preserve">
+    <value>Whether the diagnostic sensor is currently blocked.</value>
+  </data>
+  <data name="DiagnosticSensor_Labels_Description" xml:space="preserve">
+    <value>The labels/tags to mark this visual with.</value>
+  </data>
+  <data name="DiagnosticSensor_StopOnBlocked_Description" xml:space="preserve">
+    <value>Whether to stop the model when the diagnostic sensor is blocked.</value>
+  </data>
+  <data name="DistanceSensor_ControlMode_Description" xml:space="preserve">
+    <value>The control mode for the distance sensor.</value>
+  </data>
+  <data name="DistanceSensor_Distance_Description" xml:space="preserve">
+    <value>The distance of the blocking load (negative if not blocked).</value>
+  </data>
+  <data name="DistanceSensor_IsBlocked_Description" xml:space="preserve">
+    <value>Whether the distance sensor is currently blocked.</value>
+  </data>
+  <data name="DistanceSensor_TargetColorDistance_Description" xml:space="preserve">
+    <value>The euclidean distance of the blocking load's color from the target color (negative if not blocked).</value>
+  </data>
+  <data name="AngularMotor_ControlMode_Description" xml:space="preserve">
+    <value>The control mode for the linear motor.</value>
+  </data>
+  <data name="AngularMotor_TargetEnabled_Description" xml:space="preserve">
+    <value>Whether the angular motor should be automatically driven towards a target distance.</value>
+  </data>
+  <data name="AngularMotor_Acceleration_Description" xml:space="preserve">
+    <value>The acceleration for the angular motor (zero for infinite acceleration).</value>
+  </data>
+  <data name="AngularMotor_Deceleration_Description" xml:space="preserve">
+    <value>The deceleration for the angular motor (zero for infinite deceleration).</value>
+  </data>
+  <data name="AngularMotor_Direction_Description" xml:space="preserve">
+    <value>The current direction for the angular motor.</value>
+  </data>
+  <data name="AngularMotor_InitialState_Description" xml:space="preserve">
+    <value>The initial (on initialize) state for the angular motor.</value>
+  </data>
+  <data name="AngularMotor_Angle_Description" xml:space="preserve">
+    <value>The current angle.</value>
+  </data>
+  <data name="AngularMotor_InitialAngle_Description" xml:space="preserve">
+    <value>The initial angle.</value>
+  </data>
+  <data name="AngularMotor_Speed_Description" xml:space="preserve">
+    <value>The target speed for the angular motor.</value>
+  </data>
+  <data name="AngularMotor_State_Description" xml:space="preserve">
+    <value>The current state for the angular motor.</value>
+  </data>
+  <data name="AngularMotor_Target_Description" xml:space="preserve">
+    <value>The target angle to drive towards.</value>
+  </data>
+  <data name="AngularMotor_AngleFeedback_Description" xml:space="preserve">
+    <value>Whether to feedback the angle of the motor.</value>
+  </data>
+  <data name="AngularMotor_AngleResolution_Description" xml:space="preserve">
+    <value>The feedback resolution for the angle.</value>
+  </data>
+  <data name="LinearMotor_PositionFeedback_Description" xml:space="preserve">
+    <value>Whether to feedback the position of the motor.</value>
+  </data>
+  <data name="LinearMotor_PositionResolution_Description" xml:space="preserve">
+    <value>The feedback resolution for the position.</value>
+  </data>
+  <data name="EndEffectors_Category" xml:space="preserve">
+    <value>End Effectors</value>
+  </data>
+  <data name="SuctionGripper_ControlMode" xml:space="preserve">
+    <value>Control Mode</value>
+  </data>
+  <data name="SuctionGripper_ControlMode_Description" xml:space="preserve">
+    <value>The control mode for the suction gripper.</value>
+  </data>
+  <data name="SuctionGripper_GrippedVisuals" xml:space="preserve">
+    <value>Gripped Visuals</value>
+  </data>
+  <data name="SuctionGripper_GrippedVisuals_Description" xml:space="preserve">
+    <value>The visuals currently gripped by the suction gripper.</value>
+  </data>
+  <data name="SuctionGripper_MassLimit" xml:space="preserve">
+    <value>Mass Limit</value>
+  </data>
+  <data name="SuctionGripper_MassLimit_Description" xml:space="preserve">
+    <value>The maximum mass that the suction gripper is able to grip.</value>
+  </data>
+  <data name="SuctionGripper_State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="SuctionGripper_State_Description" xml:space="preserve">
+    <value>Whether suction is currently enabled on the suction gripper.</value>
+  </data>
+  <data name="SuctionGripper_GripMode" xml:space="preserve">
+    <value>Grip Mode</value>
+  </data>
+  <data name="SuctionGripper_GripMode_Description" xml:space="preserve">
+    <value>The method through which visuals should be gripped by the suction gripper.</value>
+  </data>
+  <data name="SuctionGripper_MassLimitEnabled" xml:space="preserve">
+    <value>Mass Limit Enabled</value>
+  </data>
+  <data name="SuctionGripper_MassLimitEnabled_Description" xml:space="preserve">
+    <value>Whether to limit the mass of loads that can be gripped by the suction gripper.</value>
+  </data>
+  <data name="MechanicalGripper" xml:space="preserve">
+    <value>Mechanical Gripper</value>
+  </data>
+  <data name="SuctionGripper" xml:space="preserve">
+    <value>Suction Gripper</value>
+  </data>
+  <data name="Motor_Controllers_Category" xml:space="preserve">
+    <value>Motor Controllers</value>
+  </data>
+  <data name="Motor_Encoders_Category" xml:space="preserve">
+    <value>Motor Encoders</value>
+  </data>
+  <data name="ActuationController" xml:space="preserve">
+    <value>Actuation Controller</value>
+  </data>
+  <data name="ActuationController_Activate" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="ActuationController_Activate_Description" xml:space="preserve">
+    <value>True to travel towards the upper limit, false to travel towards the lower limit.</value>
+  </data>
+  <data name="ActuationController_Description" xml:space="preserve">
+    <value>A motor controller that exposes a single "activate" input for travelling back and forth between limits.</value>
+  </data>
+  <data name="ActuationController_Motor" xml:space="preserve">
+    <value>Motor</value>
+  </data>
+  <data name="ActuationController_Motor_Description" xml:space="preserve">
+    <value>The motor that the controller is currently bound to.</value>
+  </data>
+  <data name="PollingEncoder" xml:space="preserve">
+    <value>Polling Encoder</value>
+  </data>
+  <data name="PollingEncoder_Acceleration" xml:space="preserve">
+    <value>Acceleration</value>
+  </data>
+  <data name="PollingEncoder_Acceleration_Description" xml:space="preserve">
+    <value>The most recent encoding of the motor's acceleration.</value>
+  </data>
+  <data name="PollingEncoder_Description" xml:space="preserve">
+    <value>A motor encoder that encodes the "position", "velocity" and/or "acceleration" of the motor as outputs at fixed time intervals.</value>
+  </data>
+  <data name="PollingEncoder_Frequency" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="PollingEncoder_Frequency_Description" xml:space="preserve">
+    <value>The number of times that the outputs should be updated per second.</value>
+  </data>
+  <data name="PollingEncoder_Motor" xml:space="preserve">
+    <value>Motor</value>
+  </data>
+  <data name="PollingEncoder_Motor_Description" xml:space="preserve">
+    <value>The motor that the encoder is currently bound to.</value>
+  </data>
+  <data name="PollingEncoder_Outputs" xml:space="preserve">
+    <value>Outputs</value>
+  </data>
+  <data name="PollingEncoder_Outputs_Description" xml:space="preserve">
+    <value>Specifies which outputs that the encoder should expose.</value>
+  </data>
+  <data name="PollingEncoder_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="PollingEncoder_Position_Description" xml:space="preserve">
+    <value>The most recent encoding of the motor's position.</value>
+  </data>
+  <data name="PollingEncoder_Velocity" xml:space="preserve">
+    <value>Velocity</value>
+  </data>
+  <data name="PollingEncoder_Velocity_Description" xml:space="preserve">
+    <value>The most recent encoding of the motor's velocity.</value>
+  </data>
+  <data name="PositionController" xml:space="preserve">
+    <value>Position Controller</value>
+  </data>
+  <data name="PositionController_Description" xml:space="preserve">
+    <value>A motor controller that drives the motor towards a specified (signed) target position.</value>
+  </data>
+  <data name="PositionController_Motor" xml:space="preserve">
+    <value>Motor</value>
+  </data>
+  <data name="PositionController_Motor_Description" xml:space="preserve">
+    <value>The motor that the controller is currently bound to.</value>
+  </data>
+  <data name="PositionController_TargetPosition" xml:space="preserve">
+    <value>Target Position</value>
+  </data>
+  <data name="PositionController_TargetPosition_Description" xml:space="preserve">
+    <value>The (signed) target position for the motor.</value>
+  </data>
+  <data name="PositionController_TargetMode" xml:space="preserve">
+    <value>Target Mode</value>
+  </data>
+  <data name="PositionController_TargetMode_Description" xml:space="preserve">
+    <value>Disontinuous mode (default) will follow the number line to the target. Continuous mode will take the shortest path to the target.</value>
+  </data>
+  <data name="GenericController" xml:space="preserve">
+    <value>Generic Controller</value>
+  </data>
+  <data name="GenericController_Acceleration" xml:space="preserve">
+    <value>Acceleration</value>
+  </data>
+  <data name="GenericController_Acceleration_Description" xml:space="preserve">
+    <value>The maximum acceleration for the motor (zero for infinite).</value>
+  </data>
+  <data name="GenericController_Deceleration" xml:space="preserve">
+    <value>Deceleration</value>
+  </data>
+  <data name="GenericController_Deceleration_Description" xml:space="preserve">
+    <value>The maximum deceleration for the motor (zero for infinite).</value>
+  </data>
+  <data name="GenericController_Forwards" xml:space="preserve">
+    <value>Forwards</value>
+  </data>
+  <data name="GenericController_Forwards_Description" xml:space="preserve">
+    <value>Whether the desired direction of travel for the motor is forwards.</value>
+  </data>
+  <data name="GenericController_Inputs" xml:space="preserve">
+    <value>Inputs</value>
+  </data>
+  <data name="GenericController_Inputs_Description" xml:space="preserve">
+    <value>Specifies which inputs that the controller should expose.</value>
+  </data>
+  <data name="GenericController_Motor" xml:space="preserve">
+    <value>Motor</value>
+  </data>
+  <data name="GenericController_Motor_Description" xml:space="preserve">
+    <value>The motor that the controller is currently bound to.</value>
+  </data>
+  <data name="GenericController_Reverse" xml:space="preserve">
+    <value>Reverse</value>
+  </data>
+  <data name="GenericController_Reverse_Description" xml:space="preserve">
+    <value>Whether the desired direction of travel for the motor is backwards.</value>
+  </data>
+  <data name="GenericController_Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="GenericController_Speed_Description" xml:space="preserve">
+    <value>The desired (unsigned) speed for the motor.</value>
+  </data>
+  <data name="GenericController_State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="GenericController_State_Description" xml:space="preserve">
+    <value>The desired state for the motor.</value>
+  </data>
+  <data name="MotorPredictor" xml:space="preserve">
+    <value>Motor Predictor</value>
+  </data>
+  <data name="MotorPredictor_PredictedAcceleration" xml:space="preserve">
+    <value>Predicted Acceleration</value>
+  </data>
+  <data name="MotorPredictor_PredictedAcceleration_Description" xml:space="preserve">
+    <value>The most recent prediction made for the (signed) acceleration of the motor.</value>
+  </data>
+  <data name="MotorPredictor_PredictedPosition" xml:space="preserve">
+    <value>Predicted Position</value>
+  </data>
+  <data name="MotorPredictor_PredictedPosition_Description" xml:space="preserve">
+    <value>The most recent prediction made for the position of the motor.</value>
+  </data>
+  <data name="MotorPredictor_PredictedVelocity" xml:space="preserve">
+    <value>Predicted Velocity</value>
+  </data>
+  <data name="MotorPredictor_PredictedVelocity_Description" xml:space="preserve">
+    <value>The most recent prediction made for the (signed) velocity of the motor.</value>
+  </data>
+  <data name="MotorPredictor_SourcePosition" xml:space="preserve">
+    <value>Source Position</value>
+  </data>
+  <data name="MotorPredictor_SourcePosition_Description" xml:space="preserve">
+    <value>The most recent source position received.</value>
+  </data>
+  <data name="MotorPredictor_Timeout" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+  <data name="MotorPredictor_Timeout_Description" xml:space="preserve">
+    <value>The maximum time allowed between source position updates. No more predictions are made if this time is exceeded.</value>
+  </data>
+  <data name="MotorPredictor_TimeStep" xml:space="preserve">
+    <value>Time Step</value>
+  </data>
+  <data name="MotorPredictor_TimeStep_Description" xml:space="preserve">
+    <value>The time-step for which predictions are made.</value>
+  </data>
+  <data name="MotorPredictor_UnitType" xml:space="preserve">
+    <value>Unit Type</value>
+  </data>
+  <data name="MotorPredictor_UnitType_Description" xml:space="preserve">
+    <value>The type of units (linear or angular) for the motor.</value>
+  </data>
+  <data name="LimitSensor" xml:space="preserve">
+    <value>Limit Sensor</value>
+  </data>
+  <data name="LimitSensor_AtLowerLimit" xml:space="preserve">
+    <value>At Lower Limit</value>
+  </data>
+  <data name="LimitSensor_AtLowerLimit_Description" xml:space="preserve">
+    <value>Whether the lower limit has been reached or exceeded according to the specified tolerance.</value>
+  </data>
+  <data name="LimitSensor_AtUpperLimit" xml:space="preserve">
+    <value>At Upper Limit</value>
+  </data>
+  <data name="LimitSensor_AtUpperLimit_Description" xml:space="preserve">
+    <value>Whether the upper limit has been reached or exceeded according to the specified tolerance.</value>
+  </data>
+  <data name="LimitSensor_Frequency" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="LimitSensor_Frequency_Description" xml:space="preserve">
+    <value>The number of times that the outputs should be updated per second.</value>
+  </data>
+  <data name="LimitSensor_LowerLimit" xml:space="preserve">
+    <value>Lower Limit</value>
+  </data>
+  <data name="LimitSensor_LowerLimit_Description" xml:space="preserve">
+    <value>The lower limit.</value>
+  </data>
+  <data name="LimitSensor_Motor" xml:space="preserve">
+    <value>Motor</value>
+  </data>
+  <data name="LimitSensor_Motor_Description" xml:space="preserve">
+    <value>The motor that the limit sensor is currently bound to.</value>
+  </data>
+  <data name="LimitSensor_Outputs" xml:space="preserve">
+    <value>Outputs</value>
+  </data>
+  <data name="LimitSensor_Outputs_Description" xml:space="preserve">
+    <value>Specifies which outputs the sensor should expose.</value>
+  </data>
+  <data name="LimitSensor_Tolerance" xml:space="preserve">
+    <value>Tolerance</value>
+  </data>
+  <data name="LimitSensor_Tolerance_Description" xml:space="preserve">
+    <value>The tolerance to use when determining whether the motor has reached or exceeded a limit.</value>
+  </data>
+  <data name="LimitSensor_UpperLimit" xml:space="preserve">
+    <value>Upper Limit</value>
+  </data>
+  <data name="LimitSensor_UpperLimit_Description" xml:space="preserve">
+    <value>The upper limit.</value>
+  </data>
+  <data name="LimitSensor_UseMotorLimits" xml:space="preserve">
+    <value>Use Motor Limits</value>
+  </data>
+  <data name="LimitSensor_UseMotorLimits_Description" xml:space="preserve">
+    <value>Whether to use the limits on the motor to which the limit sensor is bound.</value>
+  </data>
+  <data name="MotionSensor" xml:space="preserve">
+    <value>Motion Sensor</value>
+  </data>
+  <data name="MotionSensor_Acceleration" xml:space="preserve">
+    <value>Acceleration</value>
+  </data>
+  <data name="MotionSensor_Acceleration_Description" xml:space="preserve">
+    <value>The most recently recorded acceleration.</value>
+  </data>
+  <data name="MotionSensor_Anchor" xml:space="preserve">
+    <value>Anchor</value>
+  </data>
+  <data name="MotionSensor_Anchor_Description" xml:space="preserve">
+    <value>The point on a visual to which the sensor is attached.</value>
+  </data>
+  <data name="MotionSensor_Axis" xml:space="preserve">
+    <value>Axis</value>
+  </data>
+  <data name="MotionSensor_Axis_Description" xml:space="preserve">
+    <value>The (optional) axis for which the position, velocity and acceleration is measured. If left empty then the position is the distance from the initial location and the velocity is the speed.</value>
+  </data>
+  <data name="MotionSensor_Description" xml:space="preserve">
+    <value>A sensor that reports the position, velocity and/or acceleration experienced by a point.</value>
+  </data>
+  <data name="MotionSensor_Frequency" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="MotionSensor_Frequency_Description" xml:space="preserve">
+    <value>The frequency at which the position, velocity and acceleration are measured (0 - 100Hz).</value>
+  </data>
+  <data name="MotionSensor_Outputs" xml:space="preserve">
+    <value>Outputs</value>
+  </data>
+  <data name="MotionSensor_Outputs_Description" xml:space="preserve">
+    <value>The sensor outputs that should be exposed.</value>
+  </data>
+  <data name="MotionSensor_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="MotionSensor_Position_Description" xml:space="preserve">
+    <value>The most recently recorded position.</value>
+  </data>
+  <data name="MotionSensor_Velocity" xml:space="preserve">
+    <value>Velocity</value>
+  </data>
+  <data name="MotionSensor_Velocity_Description" xml:space="preserve">
+    <value>The most recently recorded velocity.</value>
+  </data>
+  <data name="LoadFixture_AttachmentRadius_Description" xml:space="preserve">
+    <value>The maximum distance at which loads can be attached to the fixture.</value>
+  </data>
+  <data name="LoadFixture_FilterTypes_Description" xml:space="preserve">
+    <value>The list of types for filtering which loads can be attached to the fixture, separated by comma.</value>
+  </data>
+  <data name="LoadFixture_PositionOffset_Description" xml:space="preserve">
+    <value>The relative position offset to use when recentering.</value>
+  </data>
+  <data name="LoadFixture_Recenter_Description" xml:space="preserve">
+    <value>Whether to recenter loads when attaching to the fixture.</value>
+  </data>
+  <data name="LoadFixture_RotationOffset_Description" xml:space="preserve">
+    <value>The relative rotation offset to use when recentering.</value>
+  </data>
+  <data name="ActuationController_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ActuationController_Name_Description" xml:space="preserve">
+    <value>The name for the controller.</value>
+  </data>
+  <data name="GenericController_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GenericController_Name_Description" xml:space="preserve">
+    <value>The name for the controller.</value>
+  </data>
+  <data name="PositionController_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="PositionController_Name_Description" xml:space="preserve">
+    <value>The name for the controller.</value>
+  </data>
+  <data name="DistanceSensor_ScanSeparation" xml:space="preserve">
+    <value>Scan Separation</value>
+  </data>
+  <data name="DistanceSensor_ScanSeparation_Description" xml:space="preserve">
+    <value>The distance between scan rays.</value>
+  </data>
+  <data name="PollingEncoder_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="PollingEncoder_Name_Description" xml:space="preserve">
+    <value>The name for the encoder.</value>
+  </data>
+  <data name="MotorPredictor_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MotorPredictor_Name_Description" xml:space="preserve">
+    <value>The name for the motor predictor.</value>
+  </data>
+  <data name="Visualization_Category" xml:space="preserve">
+    <value>Visualization</value>
+  </data>
+</root>

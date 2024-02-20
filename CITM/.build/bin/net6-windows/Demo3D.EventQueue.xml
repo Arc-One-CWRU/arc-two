@@ -1,0 +1,1176 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Demo3D.EventQueue</name>
+    </assembly>
+    <members>
+        <member name="F:Demo3D.EventQueue.ActionHandler.Action">
+            <summary>
+            The action to be invoked when the event occurs.
+            </summary>
+        </member>
+        <member name="F:Demo3D.EventQueue.ActionHandler.Description">
+            <summary>
+            A description object for the Event List View.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.TaskException">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.TaskCancelledException">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.ITaskCreator">
+            <summary>
+            This object can be waited on and returns an ITask if needed.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.ITask">
+            <summary>
+            ITask represents an internal task.
+            This is often a suspended C# coroutine (IEnumerable method) which is waiting for a particular time or event.
+            It can also be a task waiting for IO or a .NET Task to complete.
+            Once complete the ITask will be resumed automatically.
+            Instances of ITask objects should not be created in scripting but it's useful to understand
+            what the ITask represents when seen in the context of another method call.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.ITask.IsCompleted">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.ITask.OnCompleted(System.Action)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.ITask.OnCancelled(System.Action{Demo3D.EventQueue.TaskException})">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.ITask.Cancel(Demo3D.EventQueue.TaskException)">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.ITaskNotifier">
+            <summary>
+            If an ITask is an ITaskNotifier then OnCompletedOrCancelled can be used in place of OnCompleted and OnCancelled.
+            This stores a pointer to an interface of type ITaskActions instead of creating two actions for OnCompleted and OnCancelled.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.ITaskActions">
+            <summary>
+            Implement this interface when the class handles both OnCompleted and OnCancelled together.
+            Use this in preference to wiring up new actions for OnCompleted and OnCanelled.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.IfCancelledTS">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.IfCompletedTS">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.IfExceptionTS`1">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.FinallyTS">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.SystemTask">
+            <summary>
+            A class for converting a System.Threading.Tasks.Task into a Demo3D.EventQueue.ITask.
+            </summary>
+            <remarks>
+            See Demo3D.Native.AsyncWaitTaskExtensions in Core/Scripting/AsyncWait.cs for the converse,
+            and SynchronizationContextExtensions in Core/SimulationExecutionContext.cs for our SynchronizationContext.
+            </remarks>
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.SystemTask.CancelTask">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.SystemTask.#ctor(System.Threading.Tasks.Task,Demo3D.EventQueue.SystemTask.CancelTask)">
+            <summary>
+            Convert a System.Threading.Tasks.Task into a Demo3D.EventQueue.ITask.
+            </summary>
+            <param name="task">The System.Threading.Tasks.Task to convert.</param>
+            <param name="cancelTask">Optional cancellation delegate to cancel the task.</param>
+        </member>
+        <member name="M:Demo3D.EventQueue.SystemTask.#ctor(System.Threading.Tasks.Task)">
+            <summary>
+            Convert a System.Threading.Tasks.Task into a Demo3D.EventQueue.ITask.
+            </summary>
+            <param name="task">The System.Threading.Tasks.Task to convert.</param>
+        </member>
+        <member name="T:Demo3D.EventQueue.Coroutine">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Coroutine.CurrentTaskCancelled(Demo3D.EventQueue.TaskException)">
+            <summary>
+            Current task has completed abnormally
+            </summary>
+        </member>
+        <member name="F:Demo3D.EventQueue.Coroutine.actions">
+            <summary>
+            An interace pointer for onCompletedAction and onCancelledAction instead of using Actions.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.NamespaceGroupDoc">
+            <summary>
+            The Demo3D.EventQueue namespaces.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.NamespaceDoc">
+            <summary>
+            The Demo3D.EventQueue namespace contains functionality for scheduling asynchronous or future actions and coroutines.
+            </summary>
+            <remarks>
+            All classes and methods documented here are intended for use in user scripting.
+            </remarks>
+        </member>
+        <member name="T:Demo3D.EventQueue.Dispatcher">
+            <summary>
+            A class for manging asynchronous/future actions/coroutines in simulation time.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.Dispatcher.Time">
+            <summary>
+            The current simulation time in a fixed point format for deterministic simulation behavior.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.ProcessActions">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.ProcessNextEvent">
+            <summary>
+            Process the next event in the queue.
+            </summary>
+            <returns>True if the event wasn't canceled or false if it was and nothing was processed.</returns>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.GetNextEventAction">
+            <summary>
+            Get next action to process from the queue.
+            </summary>
+            <returns>Null if the event was cancelled and there's nothing to process.</returns>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.PeekNextEvent">
+            <summary>
+            Return the next event to be processed if there is one.
+            </summary>
+            <returns></returns>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.PeekNextAction(System.Boolean)">
+            <summary>
+            Return the next event to be processed if there is one.
+            </summary>
+            <param name="removeCancelled">Remove cancelled events from the queue</param>
+            <returns></returns>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.GetNextEventTime">
+            <summary>
+            Return the next event which isn't canceled or null if there are no more events
+            without removing it from the queue.
+            </summary>
+            <returns>The time of the next or the current time if there are actions outstanding or null if there is nothing to do.</returns>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.ProcessTime(Demo3D.EventQueue.Fixed)">
+            <summary>
+            Process a specified amount of time on the event queue and adjust the Time
+            to the end result.
+            </summary>
+            <param name="seconds">Time in seconds to process.</param>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.Clear">
+            <summary>
+            Remove all events and reset time to zero.
+            </summary>
+            <exclude />
+        </member>
+        <member name="F:Demo3D.EventQueue.Dispatcher.hookList">
+            List of IHookNode objects that need Unhook() calling on Clear().
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.Hook(Demo3D.EventQueue.IHookable)">
+            <summary>
+            Add item to be hooked and remembered for unhooking later.
+            </summary>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.Unhook(Demo3D.EventQueue.IHookable)">
+            <summary>
+            Remove a hookable item.
+            </summary>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.UnhookAll">
+            <summary>
+            Remove all hooked references.
+            </summary>
+            <exclude />
+        </member>
+        <member name="P:Demo3D.EventQueue.Dispatcher.AllHooks">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.AddAction(System.Action)">
+            <summary>
+            Invoke an action asynchronously at the current time.
+            </summary>
+            <param name="action">The action to be invoked.</param>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.AddAction(System.Action,System.Object)">
+            <summary>
+            Invoke an action asynchronously at the current time.
+            </summary>
+            <param name="action">The action to be invoked.</param>
+            <param name="description">An object that describes the action.</param>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.InsertPriorityAction(System.Action)">
+            <summary>
+            Inserts an action to the front of the action queue. Use sparingly, as it has a potentially high performance impact as it has to copy the existing queue.
+            </summary>
+            <param name="action">The action to be invoked.</param>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.ScheduleAction(Demo3D.EventQueue.Fixed,System.Action)">
+            <summary>
+            Schedule an action to be invoked in the future.
+            </summary>
+            <param name="secondsFromNow">The duration in seconds before the action should be invoked.</param>
+            <param name="action">The action to be invoked.</param>
+            <returns>The future event which, can be canceled.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.ScheduleAction(Demo3D.EventQueue.Fixed,System.Action,System.Object)">
+            <summary>
+            Schedule an action to be invoked in the future.
+            </summary>
+            <param name="secondsFromNow">The duration in seconds before the action should be invoked.</param>
+            <param name="action">The action to be invoked.</param>
+            <param name="description"></param>
+            <returns>The future event which, can be canceled.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.ScheduleActionAt(Demo3D.EventQueue.Fixed,System.Action)">
+            <summary>
+            Schedule an action to be invoked in the future.
+            </summary>
+            <param name="t">The specific time that the action should be invoked.</param>
+            <param name="action">The action to be invoked.</param>
+            <returns>The future event which, can be canceled.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.ScheduleActionAt(Demo3D.EventQueue.Fixed,System.Action,System.Object)">
+            <summary>
+            Schedule an action to be invoked in the future.
+            </summary>
+            <param name="t">The specific time that the action should be invoked.</param>
+            <param name="action">The action to be invoked.</param>
+            <param name="description">An object that describes the action.</param>
+            <returns>The future event which, can be canceled.</returns>
+        </member>
+        <member name="T:Demo3D.EventQueue.Dispatcher.Priority">
+            <summary>
+            Explicit priorities for the execution of actions at a point in time.
+            </summary>
+            <remarks>
+            The point of <see cref="M:Demo3D.EventQueue.Dispatcher.ScheduleActionAtWithPriority(Demo3D.EventQueue.Fixed,System.Action,Demo3D.EventQueue.Dispatcher.Priority,System.Object)"/> is to be explicit as to the order
+            of execution of event actions.  This enum details that explicit order.  Therefore if you need to
+            schedule your own event to run with an explicit priority, do not use any of the values already
+            defined in this enum.  You must create your own entry (one that does not clash with any other).
+            </remarks>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.ScheduleActionAtWithPriority(Demo3D.EventQueue.Fixed,System.Action,Demo3D.EventQueue.Dispatcher.Priority,System.Object)">
+            <summary>
+            Schedule an action to be invoked in the future but force it to happen at the start or end of that point in time.
+            </summary>
+            <param name="t">The specific time that the action should be invoked.</param>
+            <param name="action">The action to be invoked.</param>
+            <param name="priority">Use long.MinValue to fire event before other events at that time.
+                                   Use long.MaxValue to fire event after other events at that time.</param>
+            <param name="description">An object that describes the action.</param>
+            <returns>The future event which, can be canceled.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.AddAction(System.Func{Demo3D.EventQueue.ITask})">
+            <summary>
+            Invoke a coroutine asynchronously at the current time..
+            </summary>
+            <returns>The task representing the running coroutine, which can be canceled.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.AddAction(System.Func{Demo3D.EventQueue.ITask},System.Object)">
+            <summary>
+            Invoke a coroutine asynchronously at the current time..
+            </summary>
+            <returns>The task representing the running coroutine, which can be canceled.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.ScheduleAction(Demo3D.EventQueue.Fixed,System.Func{Demo3D.EventQueue.ITask},System.Object)">
+            <summary>
+            Schedule a coroutine to be invoked in the future.
+            </summary>
+            <returns>The task representing the running coroutine, which can be canceled.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.Wait(Demo3D.EventQueue.Fixed)">
+            <summary>
+            Create a task that will be invoked after a given number of seconds.
+            </summary>
+            <param name="seconds">The duration to wait seconds.</param>
+            <returns></returns>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Dispatcher.AdjustTime(Demo3D.EventQueue.Fixed)">
+            <summary>
+            Adjust the current simulation time.
+            </summary>
+            <param name="time"></param>
+            <exclude />
+        </member>
+        <member name="P:Demo3D.EventQueue.Dispatcher.FutureEvents">
+            <summary>
+            View non canceled events in time order for debugging.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.Dispatcher.FutureActions">
+            <summary>
+            Get all current actions and future events for debugging.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.Dispatcher.NextAction">
+            <summary>
+            Get the next time/action pair that will be executed.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.Event">
+            <summary>
+            EventQueue storage for an event action, sortable on time.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.Event.Time">
+            <summary>
+            The absolute simulation time that the event will occur at.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.Event.Action">
+            <summary>
+            The action to be invoked when the event occurs.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.Event.Cancelled">
+            <exclude />
+        </member>
+        <member name="P:Demo3D.EventQueue.Event.Canceled">
+            <summary>
+            Has the event been canceled.
+            </summary>
+            <remarks>
+            Events that have already occurred are also marked as canceled.
+            </remarks>
+        </member>
+        <member name="M:Demo3D.EventQueue.Event.Cancel">
+            <summary>
+            Cancel the event.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Event.Process">
+            <summary>
+            Invoke the action now and mark it as Canceled.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Event.GetAction">
+            <summary>
+            Get action to invoke and mark it as Canceled.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Event.ToString">
+            <summary>
+            String representation of the event if not canceled.
+            </summary>
+            <returns>String representation of the event if not canceled.</returns>
+        </member>
+        <member name="T:Demo3D.EventQueue.CancelableEvent">
+            <summary>
+            Allow event to be canceled by assigning a new event to Value or null.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.CancelableEvent.Value">
+            <summary>
+            Current event. Setting this to a new event (or null) cancels the previous event.
+            Events are automatically set to canceled once the have been occurred.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.CancelableEvent.Schedule(Demo3D.EventQueue.Dispatcher,Demo3D.EventQueue.Fixed,System.Action,System.Object)">
+            <summary>
+            Schedule a new event.
+            </summary>
+            <param name="dispatcher">Dispatcher to schedule the event on.</param>
+            <param name="secondsFromNow">Duration in seconds relative to Dispatcher.Time to invoke the action.</param>
+            <param name="action">The action to event after secondsFrom now.</param>
+            <param name="description">An object that describes the event.</param>
+            <returns>New scheduled event.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.CancelableEvent.Cancel">
+            <summary>
+            Cancel the current event (equivalent to setting Value to null).
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.CancelableEvent.HasValue">
+            <summary>
+            Is there a current event that hasn't been canceled.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.CancelableEvent.ToString">
+            <summary>
+            Event string representation.
+            </summary>
+            <returns>Event string representation.</returns>
+        </member>
+        <member name="T:Demo3D.EventQueue.ExceptionCatcher">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.ExceptionCatcher.TryCatch(Demo3D.EventQueue.TaskException)">
+            <summary>
+            Handle exception
+            </summary>
+            <param name="obj"></param>
+            <returns>True if the exception was handled, false otherwise.</returns>
+        </member>
+        <member name="T:Demo3D.EventQueue.ExceptionCatcher`1">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.Fixed">
+            <summary>
+            A fixed floating point number with 7 decimal places.
+            Using this instead of floats or double ensures deterministic event dispatching.
+            </summary>
+        </member>
+        <member name="F:Demo3D.EventQueue.Fixed.v">
+            <exclude />
+        </member>
+        <member name="F:Demo3D.EventQueue.Fixed.Zero">
+            <summary>
+            Fixed value of zero.
+            </summary>
+        </member>
+        <member name="F:Demo3D.EventQueue.Fixed.One">
+            <summary>
+            Fixed value of one.
+            </summary>
+        </member>
+        <member name="F:Demo3D.EventQueue.Fixed.MinValue">
+            <summary>
+            Smallest Fixed value possible.
+            </summary>
+        </member>
+        <member name="F:Demo3D.EventQueue.Fixed.MaxValue">
+            <summary>
+            Largest Fixed value possible.
+            </summary>
+        </member>
+        <member name="F:Demo3D.EventQueue.Fixed.Epsilon">
+            <summary>
+            The smallest difference between two Fixed numbers.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.CompareTo(System.Object)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.CompareTo(Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.GetHashCode">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.Equals(Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.Equals(System.Object)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.ToString">
+            <summary>
+            Display the number as a string.
+            </summary>
+            <returns>The number as a string.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.ToString(System.String)">
+            <summary>
+            Display the number as a string.
+            </summary>
+            <param name="format">The .NET string format to be used for the number.</param>
+            <returns>The number as a string.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.ToString(System.IFormatProvider)">
+            <summary>
+            Display the number as a string.
+            </summary>
+            <param name="provider">The culture specific number formatter to be used.</param>
+            <returns>The number as a string.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.ToString(System.String,System.IFormatProvider)">
+            <summary>
+            Display the number as a string.
+            </summary>
+            <param name="format">The .NET string format to be used for the number.</param>
+            <param name="provider">The culture specific number formatter to be used.</param>
+            <returns>The number as a string.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.Parse(System.String)">
+            <summary>
+            Convert a string in into a Fixed number.
+            </summary>
+            <param name="s">The string to be converted.</param>
+            <returns>The converted number.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.Parse(System.String,System.IFormatProvider)">
+            <summary>
+            Convert a string in into a Fixed number.
+            </summary>
+            <param name="s">The string to be converted.</param>
+            <returns>The converted number.</returns>
+            <param name="provider">The culture specific number formatter to be used.</param>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.Parse(System.String,System.Globalization.NumberStyles)">
+            <summary>
+            Convert a string in into a Fixed number.
+            </summary>
+            <param name="s">The string to be converted.</param>
+            <param name="style">The style to use when parsing the string.</param>
+            <returns>The converted number.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)">
+            <summary>
+            Convert a string in into a Fixed number.
+            </summary>
+            <param name="s">The string to be converted.</param>
+            <returns>The converted number.</returns>
+            <param name="style">The style to use when parsing the string.</param>
+            <param name="provider">The culture specific number formatter to be used.</param>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.RoundUp(System.Double@)">
+            <summary>
+            Rounds up the provided double floating point time to the fixed precision floating point
+            format. This ensures that the value returned is at least as big as the double precision
+            floating point value provided. The input value is then set to the double floating point
+            precision representation of the retured fixed precision floating point value. 
+            </summary>
+            <param name="value">The double floating point precision value to be rounded up.</param>
+            <returns>The rounded up value as a fixed precision floating point value.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_RightShift(Demo3D.EventQueue.Fixed,System.Int32)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_LeftShift(Demo3D.EventQueue.Fixed,System.Int32)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Increment(Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Decrement(Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_UnaryNegation(Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Addition(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Subtraction(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Multiply(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Division(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Division(Demo3D.EventQueue.Fixed,System.Int32)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.ToFixed(Demo3D.EventQueue.Int128)">
+            <summary>
+            Convert explicitly from Int128.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Modulus(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_LessThan(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_GreaterThan(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_LessThanOrEqual(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_GreaterThanOrEqual(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Equality(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Inequality(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Implicit(System.Int32)~Demo3D.EventQueue.Fixed">
+            <summary>
+            Convert implicitly from int.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Implicit(System.Int64)~Demo3D.EventQueue.Fixed">
+            <summary>
+            Convert implicitly from lomg.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Implicit(System.Decimal)~Demo3D.EventQueue.Fixed">
+            <summary>
+            Convert implicitly from decimal.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Explicit(System.Double)~Demo3D.EventQueue.Fixed">
+            <summary>
+            Convert explicitly from double.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Explicit(System.Single)~Demo3D.EventQueue.Fixed">
+            <summary>
+            Convert explicitly from double.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Explicit(Demo3D.EventQueue.Fixed)~System.Decimal">
+            <summary>
+            Convert explicitly to decimal.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Explicit(Demo3D.EventQueue.Fixed)~System.Int64">
+            <summary>
+            Convert explicitly to long.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Explicit(Demo3D.EventQueue.Fixed)~System.Int32">
+            <summary>
+            Convert explicitly to int.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Explicit(Demo3D.EventQueue.Fixed)~System.Single">
+            <summary>
+            Convert explicitly to float.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.op_Explicit(Demo3D.EventQueue.Fixed)~System.Double">
+            <summary>
+            Convert explicitly to double.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.Fixed.Math">
+            <summary>
+            Math class methods for Fixed values.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.Math.Sqrt(Demo3D.EventQueue.Fixed)">
+            <summary>
+            The Sqrt of the given number.
+            </summary>
+            <param name="a">The number to get the sqrt for.</param>
+            <returns>The square root of the supplied number.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.Math.Min(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <summary>
+            The minimum of two numbers.
+            </summary>
+            <param name="a">First number.</param>
+            <param name="b">Second number.</param>
+            <returns>The minimum of a and b.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.Math.Max(Demo3D.EventQueue.Fixed,Demo3D.EventQueue.Fixed)">
+            <summary>
+            The maximum of two numbers.
+            </summary>
+            <param name="a">First number.</param>
+            <param name="b">Second number.</param>
+            <returns>The maximum of a and b.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.Fixed.Math.Abs(Demo3D.EventQueue.Fixed)">
+            <summary>
+            Returns the absolute value of <paramref name="a"/>.
+            </summary>
+            <param name="a">A number.</param>
+            <returns>The absolute value.</returns>
+        </member>
+        <member name="T:Demo3D.EventQueue.FixedExtensions">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.FutureTask">
+            <summary>
+            Container task for a task that is yet to exist. It will complete when the future task completes
+            and will remember if it is canceled in order to cancel the future task upon assignment.
+            </summary>
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.GenericTask">
+            <summary>
+            A generic task that can be instantiated and notified of completion without deriving from TaskBase.
+            </summary>
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.PriorityQueue`1">
+            <summary>
+            An implementation of a min-Priority Queue using a heap.  Has O(1) .Contains()!
+            See https://github.com/BlueRaja/High-Speed-Priority-Queue-for-C-Sharp/wiki/Getting-Started for more information
+            </summary>
+            <typeparam name="T">The values in the queue.  Must implement the PriorityQueueNode interface</typeparam>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.PriorityQueue`1.#ctor(System.Int32)">
+            <summary>
+            Instantiate a new Priority Queue
+            </summary>
+            <param name="maxNodes">The max nodes ever allowed to be enqueued (going over this will cause undefined behavior)</param>
+        </member>
+        <member name="P:Demo3D.EventQueue.PriorityQueue`1.Count">
+            <summary>
+            Returns the number of nodes in the queue.  O(1)
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.PriorityQueue`1.MaxSize">
+            <summary>
+            Returns the maximum number of items that can be enqueued at once in this queue.  Once you hit this number (ie. once Count == MaxSize),
+            attempting to enqueue another item will cause undefined behavior.  O(1)
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.PriorityQueue`1.Clear">
+            <summary>
+            Removes every node from the queue.  O(n) (So, don't do this often!)
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.PriorityQueue`1.Contains(`0)">
+            <summary>
+            Returns (in O(1)!) whether the given node is in the queue.  O(1)
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.PriorityQueue`1.Enqueue(`0)">
+            <summary>
+            Enqueue a node
+            If the queue is full, the result is undefined
+            If the node is already enqueued, the result is undefined
+            O(log n)
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.PriorityQueue`1.HasHigherPriority(`0,`0)">
+            <summary>
+            Returns true if 'higher' has higher priority than 'lower', false otherwise.
+            Note that calling HasHigherPriority(node, node) (ie. both arguments the same node) will return false
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.PriorityQueue`1.Dequeue">
+            <summary>
+            Removes the head of the queue (node with highest priority; ties are broken by order of insertion), and returns it.
+            If queue is empty, result is undefined
+            O(log n)
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.PriorityQueue`1.Resize(System.Int32)">
+            <summary>
+            Resize the queue so it can accept more nodes.  All currently enqueued nodes are remain.
+            Attempting to decrease the queue size to a size too small to hold the existing nodes results in undefined behavior
+            O(n)
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.PriorityQueue`1.First">
+            <summary>
+            Returns the head of the queue, without removing it (use Dequeue() for that).
+            Returns null if the queue is empty
+            O(1)
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.PriorityQueue`1.UpdatePriority(`0,Demo3D.EventQueue.Fixed)">
+            <summary>
+            This method must be called on a node every time its priority changes while it is in the queue.  
+            <b>Forgetting to call this method will result in a corrupted queue!</b>
+            Calling this method on a node not in the queue results in undefined behavior
+            O(log n)
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.PriorityQueue`1.Remove(`0)">
+            <summary>
+            Removes a node from the queue.  The node does not need to be the head of the queue.  
+            If the node is not in the queue, the result is undefined.  If unsure, check Contains() first
+            O(log n)
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.PriorityQueue`1.IsValidQueue">
+            <summary>
+            <b>Should not be called in production code.</b>
+            Checks to make sure the queue is still in a valid state.  Used for testing/debugging the queue.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.IHookable">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.HookList">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.ITaskExtension">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.NopTask">
+            <summary>
+            A no-operation task. Use this if you are required to return an instance of ITask
+            and returning null is not permitted.
+            </summary>
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.Interval">
+            <summary>
+            Interval logic including start point but excluding end point.
+            i.e. [start,end)
+            Adjacent intervals have the coincident end and start points.
+            e.g. [0,10)[10,15)[15,20) are all adjacent with no gaps or overlaps.
+            </summary>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Interval.System#IComparable{Demo3D#EventQueue#Interval}#CompareTo(Demo3D.EventQueue.Interval)">
+            <summary>
+            Return an enum Comparison cast to int.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Interval.Compare(Demo3D.EventQueue.Interval)">
+            <summary>
+            Return an enum Comparison cast to int.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.Interval.CompareResult">
+            <summary>
+            Represented the result of comparing two intervals.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.CompareResultExtensions">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.PriorityQueueNode">
+            <exclude />
+        </member>
+        <member name="P:Demo3D.EventQueue.PriorityQueueNode.Priority">
+            <summary>
+            The Priority to insert this node at.  Must be set BEFORE adding a node to the queue
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.PriorityQueueNode.InsertionIndex">
+            <summary>
+            <b>Used by the priority queue - do not edit this value.</b>
+            Represents the order the node was inserted in
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.PriorityQueueNode.QueueIndex">
+            <summary>
+            <b>Used by the priority queue - do not edit this value.</b>
+            Represents the current position in the queue
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.Result">
+            <summary>
+            Container for values returned from Wait methods.
+            </summary>
+            <example>
+            This sample shows to read a value from a channel, which may block. When resumed, "load.Value" will contain
+            the result.
+            <code>
+                var load = new Result&lt;Visual&gt;();
+                yield return Wait.ForRead(channel.Value, load);
+                
+                // OR
+                
+                var load = Wait.ForRead(channel.Value);
+                yield return load;
+            </code>
+            </example>
+        </member>
+        <member name="M:Demo3D.EventQueue.Result.#ctor">
+            <summary>
+            Default constructor for a future result.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Result.#ctor(System.Object)">
+            <summary>
+            Constructor for a future result with the value given straight away.
+            </summary>
+            <param name="value">The immediate result value.</param>
+        </member>
+        <member name="P:Demo3D.EventQueue.Result.HasValue">
+            <summary>
+            Has the future value been set yet.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.Result.Value">
+            <summary>
+            The future result value.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Result.ToString">
+            <summary>
+            A string version of the value.
+            </summary>
+            <returns>The string representing the value.</returns>
+        </member>
+        <member name="P:Demo3D.EventQueue.Result.IsCompleted">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Result.OnCompleted(System.Action)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Result.GetResult">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Result.SetResult(System.Object)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.Result.OnCancelled(System.Action{Demo3D.EventQueue.TaskException})">
+            <exclude />
+        </member>
+        <member name="P:Demo3D.EventQueue.Result.IsCancelled">
+            <summary>
+            Was the future result value canceled.
+            This may have been due to an exception in the task that was populating the future result value.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.Result.Cancel(Demo3D.EventQueue.TaskException)">
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.TaskBase">
+             <summary>
+             Basic implementation of ITask
+            
+             Derived classes will need to call NotifyCompleted and perhaps override Cancel if they need
+             to do any cleanup upon cancellation
+             </summary>
+             <exclude />
+        </member>
+        <member name="F:Demo3D.EventQueue.TaskBase.onCompletedAction">
+            <summary>
+            Normal completion continuation
+            </summary>
+        </member>
+        <member name="F:Demo3D.EventQueue.TaskBase.onCancelledAction">
+            <summary>
+            Cancellation continuation
+            </summary>
+        </member>
+        <member name="F:Demo3D.EventQueue.TaskBase.actions">
+            <summary>
+            An interface for onCompletedAction and onCancelledAction as methods instead of using Actions.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.TaskBase.IsCompleted">
+            <summary>
+            Indicates that NotifyCompleted() was called
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.TaskBase.IsCancelled">
+            <summary>
+            Indicates that Cancel() was called
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.TaskBase.CancellationContext">
+            <summary>
+            The context passed to Cancel()
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.TaskExt">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.TaskExt.IsCompleted(Demo3D.EventQueue.ITask)">
+            <summary>
+            Is the task null or IsCompleted.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.TaskExt.IfCompleted(Demo3D.EventQueue.ITask,System.Action,System.String)">
+            <summary>
+            Called when a task completes successfully.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.TaskExt.IfCancelled(Demo3D.EventQueue.ITask,System.Action{Demo3D.EventQueue.TaskException})">
+            <summary>
+            Called when a task is canceled. This will not prevent the cancellation
+            from propagating.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.TaskExt.IfException``1(Demo3D.EventQueue.ITask,System.Action{``0},System.String)">
+            <summary>
+            Called when a task is canceled with the given exception type. Containing
+            task will resume execution, mimicking try/catch behavior in C#.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.TaskExt.Finally(Demo3D.EventQueue.ITask,System.Action)">
+            <summary>
+            Called when a task completes or is canceled. This will not prevent propagation
+            of the cancel event.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.TaskShim">
+            <summary>
+            TaskShim wraps a task so that we can observe the completion and cancellation events without
+            affecting the normal continuation operation. 
+            
+            For example, you might normally have:
+            
+                 yield return Wait.ForSeconds(10);
+            
+            You can also do:
+            
+                 yield return new TaskShim( Wait.ForSeconds(10), () => Log("Wait completed normally"), null );
+            
+            or use the extension methods:
+            
+                 yield return Wait.ForSeconds(10).IfCompleted( () => Log("Wait completed normally" );
+            
+            The existing coroutine stack will function as normal, but now we're able to observe the completion
+            of the source task.
+            </summary>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.TaskShim.TaskCancelled(Demo3D.EventQueue.TaskException)">
+            <summary>
+            Called when subtask is cancelled. The cancellation is travelling up the 
+            task "call stack"
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.LambdaUtilities._Do``1(``0,System.Action{``0})">
+            <summary>
+            Call action if input is not null, returning input
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.LambdaMonitor`1">
+            <summary>
+            <para>FOR INTERNAL USE ONLY.</para>
+            Abstract base class that helps with monitoring C# lambda expressions. It analyses expression trees and provides
+            notification for when the lambda *may* have changed value. This prevents the need for periodic polling, and so 
+            we can wait on expressions having particular values or changing value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.LambdaMonitor`1.#ctor(System.Func{`0},System.ComponentModel.INotifyPropertyChanged[])">
+            <summary>
+            Use an explicit collection of INotifyPropertyChanged objects for performance.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.LambdaMonitor`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0}})">
+            <summary>
+            Discover any INotifyPropertyChanged objects in the expression dynamically.
+            NOTE: This can be very slow to compile the expression to a usable Func.
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.WaitUntilBooleanTask">
+            <summary>
+            <para>FOR INTERNAL USE ONLY.</para>
+            Continuation class for expressions that must evaluate to true before execution may proceed. Note that execution will
+            not block (ie, resume immediately) if the expression is already true.
+            </summary>
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.WaitUntilChangedTask">
+            <summary>
+            <para>FOR INTERNAL USE ONLY.</para>
+            Continuation class for expressions that must change their value before execution may proceed. Note that
+            execution always suspends.
+            </summary>
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.IChannel`1">
+            <summary>
+            A channel is a communication pipe with fixed capacity. Attempts to read from an empty channel will block, as will attempting to write to a full channel.
+            </summary>
+            <typeparam name="T">The type of object that this channel manages a queue of.</typeparam>
+        </member>
+        <member name="M:Demo3D.EventQueue.IChannel`1.Write(`0)">
+            <summary>
+            Write an object to the channel
+            </summary>
+            <param name="obj">Object to write to the channel.</param>
+        </member>
+        <member name="M:Demo3D.EventQueue.IChannel`1.Peek">
+            <summary>
+            Peek at the next object from the channel.
+            </summary>
+            <returns>Next object from the channel.</returns>
+        </member>
+        <member name="M:Demo3D.EventQueue.IChannel`1.Read">
+            <summary>
+            Read an object from the channel.
+            </summary>
+            <returns>Next object from the channel.</returns>
+        </member>
+        <member name="P:Demo3D.EventQueue.IChannel`1.IsFull">
+            <summary>
+            Has the channel reached its capacity and is full.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.IChannel`1.IsEmpty">
+            <summary>
+            Is the channel empty.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.IChannel`1.Count">
+            <summary>
+            How many elements are in the channel waiting to be read.
+            </summary>
+        </member>
+        <member name="P:Demo3D.EventQueue.IChannel`1.Capacity">
+            <summary>
+            The maximum number of elements that can be written to this channel before one must be read.
+            </summary>
+        </member>
+        <member name="M:Demo3D.EventQueue.IChannel`1.EnqueueWriter(System.Action)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.IChannel`1.EnqueueReader(Demo3D.EventQueue.Result)">
+            <exclude />
+        </member>
+        <member name="M:Demo3D.EventQueue.IChannel`1.EnqueuePeeker(Demo3D.EventQueue.Result)">
+            <exclude />
+        </member>
+        <member name="P:Demo3D.EventQueue.IChannel`1.Items">
+            <summary>
+            Items that are currently in the channel waiting to be read
+            </summary>
+        </member>
+        <member name="T:Demo3D.EventQueue.ChannelBase`1">
+            <summary>
+            <para>FOR INTERNAL USE ONLY.</para>
+            Abstract base class for common channel implementations.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.FifoChannel`1">
+            <summary>
+            <para>FOR INTERNAL USE ONLY.</para>
+            A channel that behaves like a queue. 
+            It has fixed capacity. Attempts to read from an empty channel will block, as will attempts to write to a full channel.
+            </summary>
+            <typeparam name="T">The type of the values being passed through the channel</typeparam>
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.LifoChannel`1">
+            <summary>
+            <para>FOR INTERNAL USE ONLY.</para>
+            A channel that behaves like a stack. 
+            It has fixed capacity. Attempts to read from an empty channel will block, as will attempts to write to a full channel.
+            </summary>
+            <typeparam name="T">The type of the values being passed through the channel</typeparam>
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.WriteToChannel`1">
+            <summary>
+            <para>FOR INTERNAL USE ONLY.</para>
+            A continuation class for writing to channels. Execution blocks only if the channel is full. Many threads
+            may be attempting to write to the channel, and these are queued up and resumed in turn as data is read from the channel.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.TypeExtension">
+            <summary>
+            <para>FOR INTERNAL USE ONLY.</para>
+            </summary>
+            <exclude />
+        </member>
+        <member name="T:Demo3D.EventQueue.WaitForSeconds">
+            <exclude />
+        </member>
+    </members>
+</doc>

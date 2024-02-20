@@ -1,0 +1,1747 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CITM/1.0.0": {
+        "dependencies": {
+          "CT": "16.1.5.12356",
+          "Demo3D.AspectLibrary": "16.1.5.12356",
+          "Demo3D.Common": "16.1.5.12356",
+          "Demo3D.Core": "16.1.5.12356",
+          "Demo3D.EventQueue": "16.1.5.12356",
+          "Demo3D.IO": "16.1.5.12356",
+          "Demo3D.Licensing": "16.1.5.12356",
+          "Demo3D.Raw": "16.1.5.12356",
+          "HtmlAgilityPack": "1.11.51.0",
+          "PLC": "16.1.5.12356",
+          "SkiaSharp": "1.60.0.0",
+          "SkiaSharp.Extended.Svg": "1.60.0.0",
+          "SmartEdit": "16.1.5.12356",
+          "WpfControls": "16.1.5.12356"
+        },
+        "runtime": {
+          "CITM.dll": {}
+        },
+        "resources": {
+          "de/CITM.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "CT/16.1.5.12356": {
+        "runtime": {
+          "CT.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "Demo3D.AspectLibrary/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.AspectLibrary.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "Demo3D.Common/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.Common.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "Demo3D.Core/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.Core.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "Demo3D.EventQueue/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.EventQueue.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "Demo3D.IO/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.IO.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "Demo3D.Licensing/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.Licensing.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "Demo3D.Raw/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.Raw.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "HtmlAgilityPack/1.11.51.0": {
+        "runtime": {
+          "HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.51.0",
+            "fileVersion": "1.11.51.0"
+          }
+        }
+      },
+      "PLC/16.1.5.12356": {
+        "runtime": {
+          "PLC.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "SkiaSharp/1.60.0.0": {
+        "runtime": {
+          "SkiaSharp.dll": {
+            "assemblyVersion": "1.60.0.0",
+            "fileVersion": "1.60.0.0"
+          }
+        }
+      },
+      "SkiaSharp.Extended.Svg/1.60.0.0": {
+        "runtime": {
+          "SkiaSharp.Extended.Svg.dll": {
+            "assemblyVersion": "1.60.0.0",
+            "fileVersion": "1.60.0.0"
+          }
+        }
+      },
+      "SmartEdit/16.1.5.12356": {
+        "runtime": {
+          "SmartEdit.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "WpfControls/16.1.5.12356": {
+        "runtime": {
+          "WpfControls.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis/4.6.0.0": {
+        "runtime": {
+          "Microsoft.CodeAnalysis.dll": {
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.600.23.25908"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.CSharp/4.6.0.0": {
+        "runtime": {
+          "Microsoft.CodeAnalysis.CSharp.dll": {
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.600.23.25908"
+          }
+        }
+      },
+      "Troschuetz.Random/1.4.0.0": {
+        "runtime": {
+          "Troschuetz.Random.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
+          }
+        }
+      },
+      "antlr.runtime/2.7.5.2": {
+        "runtime": {
+          "antlr.runtime.dll": {
+            "assemblyVersion": "2.7.5.2",
+            "fileVersion": "2.7.5.2"
+          }
+        }
+      },
+      "DevExpress.Xpf.Core.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Core.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Docking.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Docking.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Mvvm.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Mvvm.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Grid.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Grid.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Data.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Data.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "Demo3D.Globalization/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.Globalization.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "ICSharpCode.SharpZipLib/1.4.2.13": {
+        "runtime": {
+          "ICSharpCode.SharpZipLib.dll": {
+            "assemblyVersion": "1.4.2.13",
+            "fileVersion": "1.4.2.13"
+          }
+        }
+      },
+      "FlatBuffers/1.0.0.0": {
+        "runtime": {
+          "FlatBuffers.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Sim3D/16.1.5.12356": {
+        "runtime": {
+          "Sim3D.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "ICSharpCode.CodeCompletion/16.1.5.12356": {
+        "runtime": {
+          "ICSharpCode.CodeCompletion.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "ICSharpCode.NRefactory/5.0.0.0": {
+        "runtime": {
+          "ICSharpCode.NRefactory.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.5.0.0"
+          }
+        }
+      },
+      "ICSharpCode.AvalonEdit/5.0.1.0": {
+        "runtime": {
+          "ICSharpCode.AvalonEdit.dll": {
+            "assemblyVersion": "5.0.1.0",
+            "fileVersion": "5.0.1.0"
+          }
+        }
+      },
+      "Demo3D.Windows/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.Windows.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "PhysicsInterface.NET/1.0.0.0": {
+        "runtime": {
+          "PhysicsInterface.NET.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Semver/2.1.0.0": {
+        "runtime": {
+          "Semver.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Grid.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Grid.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.PropertyGrid.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.PropertyGrid.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "CT.Core/16.1.5.12356": {
+        "runtime": {
+          "CT.Core.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "Antlr3.Runtime/3.4.1.9004": {
+        "runtime": {
+          "Antlr3.Runtime.dll": {
+            "assemblyVersion": "3.4.1.9004",
+            "fileVersion": "3.4.1.9004"
+          }
+        }
+      },
+      "SoapFormatter/1.1.0.0": {
+        "runtime": {
+          "SoapFormatter.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.9.49678"
+          }
+        }
+      },
+      "alglibnet2/0.0.0.0": {
+        "runtime": {
+          "alglibnet2.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Autofac/7.0.1.0": {
+        "runtime": {
+          "Autofac.dll": {
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.1.0"
+          }
+        }
+      },
+      "DevExpress.Spreadsheet.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Spreadsheet.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Diagram.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Diagram.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Diagram.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Diagram.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Ribbon.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Ribbon.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "LibTessDotNet.Double/1.1.15.0": {
+        "runtime": {
+          "LibTessDotNet.Double.dll": {
+            "assemblyVersion": "1.1.15.0",
+            "fileVersion": "1.1.15.0"
+          }
+        }
+      },
+      "Demo3D.Chromium/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.Chromium.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "SharpDX.Mathematics/4.2.0.0": {
+        "runtime": {
+          "SharpDX.Mathematics.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "SharpDX.Desktop/4.2.0.0": {
+        "runtime": {
+          "SharpDX.Desktop.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "SharpDX.D3DCompiler/4.2.0.0": {
+        "runtime": {
+          "SharpDX.D3DCompiler.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "SharpDX.Direct3D11/4.2.0.0": {
+        "runtime": {
+          "SharpDX.Direct3D11.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "SharpDX.DXGI/4.2.0.0": {
+        "runtime": {
+          "SharpDX.DXGI.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "SharpDX/4.2.0.0": {
+        "runtime": {
+          "SharpDX.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "ZXing.Windows.Compatibility/0.16.10.0": {
+        "runtime": {
+          "ZXing.Windows.Compatibility.dll": {
+            "assemblyVersion": "0.16.10.0",
+            "fileVersion": "0.16.10.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Spreadsheet.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Spreadsheet.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Grid.v22.1.Extensions/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Grid.v22.1.Extensions.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "OnShape.IO/16.1.5.12356": {
+        "runtime": {
+          "OnShape.IO.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "DevExpress.Xpf.Gauges.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Gauges.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "System.Management/4.0.0.0": {
+        "runtime": {
+          "System.Management.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "WpfShared/16.1.5.12356": {
+        "runtime": {
+          "WpfShared.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "AGXCS/1.0.0.0": {
+        "runtime": {
+          "AGXCS.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "QuikGraph/2.5.0.0": {
+        "runtime": {
+          "QuikGraph.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.0.0"
+          }
+        }
+      },
+      "KJECS/1.0.0.0": {
+        "runtime": {
+          "KJECS.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Demo3D.DotX/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.DotX.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "TDx.TDxInput/1.1.0.0": {
+        "runtime": {
+          "TDx.TDxInput.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "DevExpress.Docs.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Docs.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "Demo3D.Renderers/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.Renderers.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "zxing/0.16.7.0": {
+        "runtime": {
+          "zxing.dll": {
+            "assemblyVersion": "0.16.7.0",
+            "fileVersion": "0.16.7.0"
+          }
+        }
+      },
+      "MarkdownSharp/2.0.0.0": {
+        "runtime": {
+          "MarkdownSharp.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.5.27462"
+          }
+        }
+      },
+      "Demo3D.Renderers.UI/16.1.5.12356": {
+        "runtime": {
+          "Demo3D.Renderers.UI.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "DevExpress.Office.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Office.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Office.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Office.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "OAuth/16.1.5.12356": {
+        "runtime": {
+          "OAuth.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "GainsightPX/1.3.6.0": {
+        "runtime": {
+          "GainsightPX.dll": {
+            "assemblyVersion": "1.3.6.0",
+            "fileVersion": "1.3.6.0"
+          }
+        }
+      },
+      "Siemens.Simatic.Simulation.Runtime.Api.x64/2.1.0.2701": {
+        "runtime": {
+          "Siemens.Simatic.Simulation.Runtime.Api.x64.dll": {
+            "assemblyVersion": "2.1.0.2701",
+            "fileVersion": "2.1.0.2701"
+          }
+        }
+      },
+      "RockwellAutomation.FactoryTalkLogixEcho.Api.Interfaces/2.0.832.0": {
+        "runtime": {
+          "RockwellAutomation.FactoryTalkLogixEcho.Api.Interfaces.dll": {
+            "assemblyVersion": "2.0.832.0",
+            "fileVersion": "2.0.832.0"
+          }
+        }
+      },
+      "RockwellAutomation.FactoryTalkLogixEcho.Api.Client/2.0.832.0": {
+        "runtime": {
+          "RockwellAutomation.FactoryTalkLogixEcho.Api.Client.dll": {
+            "assemblyVersion": "2.0.832.0",
+            "fileVersion": "2.0.832.0"
+          }
+        }
+      },
+      "CT.Openness/16.1.5.12356": {
+        "runtime": {
+          "CT.Openness.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "Interop.S7PROSIMLib/1.0.0.0": {
+        "runtime": {
+          "Interop.S7PROSIMLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CT.Drives/16.1.5.12356": {
+        "runtime": {
+          "CT.Drives.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "CT.IO/16.1.5.12356": {
+        "runtime": {
+          "CT.IO.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "CT.IOLink/16.1.5.12356": {
+        "runtime": {
+          "CT.IOLink.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "CT.Motion/16.1.5.12356": {
+        "runtime": {
+          "CT.Motion.dll": {
+            "assemblyVersion": "16.1.5.12356",
+            "fileVersion": "16.1.5.12356"
+          }
+        }
+      },
+      "dragonz.actb/1.2.0.0": {
+        "runtime": {
+          "dragonz.actb.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "DevExpress.Data.Desktop.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Data.Desktop.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Charts.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Charts.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Printing.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Printing.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Drawing.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Drawing.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Pdf.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Pdf.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Layout.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Layout.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "ICSharpCode.NRefactory.CSharp/5.0.0.0": {
+        "runtime": {
+          "ICSharpCode.NRefactory.CSharp.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.5.0.0"
+          }
+        }
+      },
+      "ICSharpCode.NRefactory.Cecil/5.0.0.0": {
+        "runtime": {
+          "ICSharpCode.NRefactory.Cecil.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.4.0.0"
+          }
+        }
+      },
+      "Interop.RSEDSLib/1.0.0.0": {
+        "runtime": {
+          "Interop.RSEDSLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Interop.ActUtlType64Lib/5.0.0.0": {
+        "runtime": {
+          "Interop.ActUtlType64Lib.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "Interop.ActSupportMsg64Lib/5.0.0.0": {
+        "runtime": {
+          "Interop.ActSupportMsg64Lib.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "Interop.ActUtlTypeLib/1.0.0.0": {
+        "runtime": {
+          "Interop.ActUtlTypeLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Interop.ActSupportMsgLib/1.0.0.0": {
+        "runtime": {
+          "Interop.ActSupportMsgLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Opc.Ua.Core/1.4.369.0": {
+        "runtime": {
+          "Opc.Ua.Core.dll": {
+            "assemblyVersion": "1.4.369.0",
+            "fileVersion": "1.4.369.30"
+          }
+        }
+      },
+      "Softing.Opc.Ua.Client/3.10.0.3358": {
+        "runtime": {
+          "Softing.Opc.Ua.Client.dll": {
+            "assemblyVersion": "3.10.0.3358",
+            "fileVersion": "3.10.0.3358"
+          }
+        }
+      },
+      "DevExpress.DataAccess.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.DataAccess.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.DataVisualization.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.DataVisualization.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Sparkline.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Sparkline.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Printing.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Printing.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.DocumentViewer.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.DocumentViewer.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Images.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Images.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "ChromiumFX/77.1.18.0": {
+        "runtime": {
+          "ChromiumFX.dll": {
+            "assemblyVersion": "77.1.18.0",
+            "fileVersion": "77.1.18.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.NavBar.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.NavBar.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.TreeMap.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.TreeMap.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.RichEdit.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.RichEdit.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Pdf.v22.1.Drawing/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Pdf.v22.1.Drawing.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.XtraCharts.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.XtraCharts.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "SharpDX.Direct3D12/4.2.0.0": {
+        "runtime": {
+          "SharpDX.Direct3D12.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "System.IdentityModel.Tokens.Jwt/6.32.1.0": {
+        "runtime": {
+          "System.IdentityModel.Tokens.Jwt.dll": {
+            "assemblyVersion": "6.32.1.0",
+            "fileVersion": "6.32.1.40728"
+          }
+        }
+      },
+      "Google.Protobuf/3.21.6.0": {
+        "runtime": {
+          "Google.Protobuf.dll": {
+            "assemblyVersion": "3.21.6.0",
+            "fileVersion": "3.21.6.0"
+          }
+        }
+      },
+      "Grpc.Core.Api/2.0.0.0": {
+        "runtime": {
+          "Grpc.Core.Api.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.46.3.0"
+          }
+        }
+      },
+      "Grpc.Core/2.0.0.0": {
+        "runtime": {
+          "Grpc.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.46.3.0"
+          }
+        }
+      },
+      "DevExpress.Charts.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Charts.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "Mono.Cecil/0.9.5.0": {
+        "runtime": {
+          "Mono.Cecil.dll": {
+            "assemblyVersion": "0.9.5.0",
+            "fileVersion": "0.9.5.0"
+          }
+        }
+      },
+      "Opc.Ua.Security.Certificates/1.4.369.0": {
+        "runtime": {
+          "Opc.Ua.Security.Certificates.dll": {
+            "assemblyVersion": "1.4.369.0",
+            "fileVersion": "1.4.369.30"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/6.0.0.0": {
+        "runtime": {
+          "Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.322.12309"
+          }
+        }
+      },
+      "Opc.Ua.Configuration/1.4.369.0": {
+        "runtime": {
+          "Opc.Ua.Configuration.dll": {
+            "assemblyVersion": "1.4.369.0",
+            "fileVersion": "1.4.369.30"
+          }
+        }
+      },
+      "Opc.Ua.Client/1.4.369.0": {
+        "runtime": {
+          "Opc.Ua.Client.dll": {
+            "assemblyVersion": "1.4.369.0",
+            "fileVersion": "1.4.369.30"
+          }
+        }
+      },
+      "DevExpress.Xpo.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpo.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.CodeParser.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.CodeParser.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.LayoutControl.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.LayoutControl.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.Xpf.Controls.v22.1/22.1.6.0": {
+        "runtime": {
+          "DevExpress.Xpf.Controls.v22.1.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "DevExpress.TreeMap.v22.1.Core/22.1.6.0": {
+        "runtime": {
+          "DevExpress.TreeMap.v22.1.Core.dll": {
+            "assemblyVersion": "22.1.6.0",
+            "fileVersion": "22.1.6.0"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/6.32.1.0": {
+        "runtime": {
+          "Microsoft.IdentityModel.Tokens.dll": {
+            "assemblyVersion": "6.32.1.0",
+            "fileVersion": "6.32.1.40728"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/6.32.1.0": {
+        "runtime": {
+          "Microsoft.IdentityModel.Logging.dll": {
+            "assemblyVersion": "6.32.1.0",
+            "fileVersion": "6.32.1.40728"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/6.32.1.0": {
+        "runtime": {
+          "Microsoft.IdentityModel.JsonWebTokens.dll": {
+            "assemblyVersion": "6.32.1.0",
+            "fileVersion": "6.32.1.40728"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Abstractions/6.32.1.0": {
+        "runtime": {
+          "Microsoft.IdentityModel.Abstractions.dll": {
+            "assemblyVersion": "6.32.1.0",
+            "fileVersion": "6.32.1.40728"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CITM/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CT/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.AspectLibrary/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.Common/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.Core/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.EventQueue/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.IO/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.Licensing/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.Raw/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HtmlAgilityPack/1.11.51.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PLC/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SkiaSharp/1.60.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SkiaSharp.Extended.Svg/1.60.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SmartEdit/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WpfControls/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.CodeAnalysis/4.6.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.CodeAnalysis.CSharp/4.6.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Troschuetz.Random/1.4.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "antlr.runtime/2.7.5.2": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Core.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Docking.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Mvvm.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Grid.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Data.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.Globalization/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ICSharpCode.SharpZipLib/1.4.2.13": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FlatBuffers/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sim3D/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ICSharpCode.CodeCompletion/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ICSharpCode.NRefactory/5.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ICSharpCode.AvalonEdit/5.0.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.Windows/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PhysicsInterface.NET/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Semver/2.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Grid.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.PropertyGrid.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CT.Core/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Antlr3.Runtime/3.4.1.9004": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SoapFormatter/1.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "alglibnet2/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Autofac/7.0.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Spreadsheet.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Diagram.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Diagram.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Ribbon.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibTessDotNet.Double/1.1.15.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.Chromium/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpDX.Mathematics/4.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpDX.Desktop/4.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpDX.D3DCompiler/4.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpDX.Direct3D11/4.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpDX.DXGI/4.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpDX/4.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ZXing.Windows.Compatibility/0.16.10.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Spreadsheet.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Grid.v22.1.Extensions/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OnShape.IO/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Gauges.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Management/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WpfShared/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AGXCS/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QuikGraph/2.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KJECS/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.DotX/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TDx.TDxInput/1.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Docs.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.Renderers/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "zxing/0.16.7.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MarkdownSharp/2.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo3D.Renderers.UI/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Office.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Office.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OAuth/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GainsightPX/1.3.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Siemens.Simatic.Simulation.Runtime.Api.x64/2.1.0.2701": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RockwellAutomation.FactoryTalkLogixEcho.Api.Interfaces/2.0.832.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RockwellAutomation.FactoryTalkLogixEcho.Api.Client/2.0.832.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CT.Openness/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.S7PROSIMLib/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CT.Drives/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CT.IO/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CT.IOLink/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CT.Motion/16.1.5.12356": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "dragonz.actb/1.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Data.Desktop.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Charts.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Printing.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Drawing.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Pdf.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Layout.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ICSharpCode.NRefactory.CSharp/5.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ICSharpCode.NRefactory.Cecil/5.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.RSEDSLib/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.ActUtlType64Lib/5.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.ActSupportMsg64Lib/5.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.ActUtlTypeLib/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.ActSupportMsgLib/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Opc.Ua.Core/1.4.369.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Softing.Opc.Ua.Client/3.10.0.3358": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.DataAccess.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.DataVisualization.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Sparkline.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Printing.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.DocumentViewer.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Images.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ChromiumFX/77.1.18.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.NavBar.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.TreeMap.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.RichEdit.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Pdf.v22.1.Drawing/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.XtraCharts.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpDX.Direct3D12/4.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.IdentityModel.Tokens.Jwt/6.32.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Google.Protobuf/3.21.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Grpc.Core.Api/2.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Grpc.Core/2.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Charts.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mono.Cecil/0.9.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Opc.Ua.Security.Certificates/1.4.369.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Logging.Abstractions/6.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Opc.Ua.Configuration/1.4.369.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Opc.Ua.Client/1.4.369.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpo.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.CodeParser.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.LayoutControl.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Xpf.Controls.v22.1/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.TreeMap.v22.1.Core/22.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.Tokens/6.32.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.Logging/6.32.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.JsonWebTokens/6.32.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.Abstractions/6.32.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
